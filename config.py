@@ -141,8 +141,9 @@ MAX_RECORDING_DURATION = int(os.environ.get("MAX_RECORDING_DURATION", 28800))  #
 RECORDINGS_RETENTION_DAYS = int(os.environ.get("RECORDINGS_RETENTION_DAYS", 7))  # Auto-cleanup after 7 days
 
 # --- Version/Mode Configuration ---
+APP_VERSION = "2.5.0"
+
 # Detect if we are running in Full or Light mode
-# Full mode has integrated FlareSolverr and Byparr directories
 _has_solvers = os.path.exists("flaresolverr") and (os.path.exists("byparr") or os.path.exists("byparr_src"))
 VERSION_MODE = "Full" if _has_solvers else "Light"
 
